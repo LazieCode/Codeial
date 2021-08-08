@@ -4,7 +4,7 @@ const port = 8000;
 const app = express();
 
 
-
+app.get('/', require('./routes'));
 
 
 
