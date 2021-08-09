@@ -1,6 +1,16 @@
 const express = require('express');
 const port = 8000;
 const app = express();
+const expressLayouts = require('express-ejs-layouts');
+
+app.use(express.static('./assets')) ;
+
+app.use(expressLayouts);
+
+// doing this to extract the styles and scripts from the body and put them automatically into the header.
+
+app.set('layout extractStyles', true);
+app.set('layout extractScripts', true);
 
 //set up the view engine
 app.set('view engine', 'ejs');

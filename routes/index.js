@@ -4,7 +4,7 @@ const router = express.Router();
 
 // console.log("router loaded");
 
-router.get('/', homeController.cutText);
+router.get('/', homeController.home);
 
 
 module.exports = router;
